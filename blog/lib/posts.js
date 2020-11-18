@@ -24,6 +24,36 @@ export function getSortedPostsData() {
       ...matterResult.data,
     };
   });
-  // 根据文件内容多少进行排序
+
   return allPostsData;
 }
+
+// 由于每篇文章的路径都来自于获取的数据，因此将获取的多组数据，拆分后分别展示；
+// 将文件前缀作为id保存在参数中
+export function getAllPostsIds() {
+  const fileNames = fs.readdirSync(postDirectory);
+  return fileNames.map((fileName) => {
+    return {
+      params: {
+        id: fileName.replace(/\.md$/, ""),
+      },
+    };
+  });
+}
+// 通过id获取各组数据
+export function getAllPostsData(id) {
+  const fullPath = path.join(postDirectory, `${id}.md`);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+
+  const matterResult = matter(fileContents);
+
+  return {
+    id,
+    ...matterResult.data,
+  };
+}
+// // 获取动态数据
+// export default async function getSortedPostsData() {
+//   const res = await fetch(url);
+//   return res.json();
+// }
