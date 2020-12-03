@@ -1,0 +1,28 @@
+.header-wrapper {
+  position: relative;
+  height: 2.8rem;
+  padding: 0.4rem;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  background-color: #fff;
+}
+.header-logo {
+  color: #1e90ff;
+  font-size: 1.4rem;
+  text-align: left;
+}
+.header-txt {
+  font-size: 0.6rem;
+  color: #999;
+  display: inline-block;
+  padding-left: 0.7rem;
+}
+.ant-meu {
+  line-height: 2.8rem;
+}
+.ant-menu-item {
+  font-size: 1rem !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #999;
+}
