@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Header from "../components/Header";
 import Author from "../components/Author";
+import Ads from "../components/Ads";
 import { Row, Col, List } from "antd";
 
 import "../static/style/pages/home.list.css";
@@ -87,6 +88,7 @@ export default function Home() {
         </Col>
         <Col className="home-right" xs={0} sm={0} md={7} lg={5} xl={4}>
           <Author />
+          <Ads />
         </Col>
       </Row>
     </>
