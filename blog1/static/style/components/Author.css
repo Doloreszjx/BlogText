@@ -1,0 +1,16 @@
+.author-info {
+  text-align: center;
+}
+.author-icon {
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 3rem;
+}
+.author-id {
+  font-size: 1rem;
+  color: #1e90ff;
+}
+.author-desc {
+  font-size: 0.6rem;
+  color: #999;
+}
